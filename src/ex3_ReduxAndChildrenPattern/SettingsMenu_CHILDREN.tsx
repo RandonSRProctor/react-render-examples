@@ -1,14 +1,17 @@
-import { useState } from 'react';
-
-import { Setting } from './components/Setting';
+import { SettingNickname } from './components/SettingNickname';
 import { ChangeNicknameForm } from './components/ChangeNicknameForm';
 import { SettingTextSize } from './components/SettingTextSize';
 import { SettingBGColor } from './components/SettingBGColor';
 import { BackGround } from './components/BackGround';
+import {
+  selectIsNicknameFormOpen,
+  selectUserNickname,
+} from '../redux/slices/toDoListSlice';
+import { useAppSelector } from '../redux/hooks/hooks';
 
 export const SettingsMenu_CHILDREN = () => {
-  const [userNickname, setUserNickName] = useState('');
-  const [isNicknameFormOpen, setIsNicknameFormOpen] = useState(false);
+  const userNickname = useAppSelector(selectUserNickname);
+  const isNicknameFormOpen = useAppSelector(selectIsNicknameFormOpen);
 
   return (
     <BackGround>
@@ -17,20 +20,10 @@ export const SettingsMenu_CHILDREN = () => {
         <ul aria-label="User Settings">
           <SettingTextSize />
           <SettingBGColor />
-          <Setting
-            setting="Nickname"
-            value={userNickname}
-            buttonText={
-              isNicknameFormOpen ? 'Done Changing Nickname' : 'Change NickName'
-            }
-            action={() => setIsNicknameFormOpen(prevState => !prevState)}
-          />
+          <SettingNickname />
           {isNicknameFormOpen ? (
             <li>
-              <ChangeNicknameForm
-                userNickname={userNickname}
-                setUserNickName={setUserNickName}
-              />
+              <ChangeNicknameForm />
             </li>
           ) : null}
         </ul>

@@ -2,7 +2,7 @@ import { ChangeNicknameForm } from './components/ChangeNicknameForm';
 import { SettingNickname } from './components/SettingNickname';
 import { SettingTextSize } from './components/SettingTextSize';
 import { SettingBGColor } from './components/SettingBGColor';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '../redux/hooks/hooks';
 import {
   selectBackgroundColor,
   selectIsNicknameFormOpen,
@@ -10,9 +10,10 @@ import {
 } from '../redux/slices/toDoListSlice';
 
 export const SettingsMenu_REDUX = () => {
-  const backgroundColor = useSelector(selectBackgroundColor);
-  const userNickname = useSelector(selectUserNickname);
-  const isNicknameFormOpen = useSelector(selectIsNicknameFormOpen);
+  useAppSelector;
+  const backgroundColor = useAppSelector(selectBackgroundColor);
+  const userNickname = useAppSelector(selectUserNickname);
+  const isNicknameFormOpen = useAppSelector(selectIsNicknameFormOpen);
   return (
     <div className={`${backgroundColor} p-16`}>
       <div className="SETTINGS_MENU pl-1 py-1 rounded bg-white border border-black shadow">
