@@ -1,9 +1,9 @@
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
+import { Setting } from './Setting';
 import {
   selectIsLargeFontEnabled,
   toggleTextSize,
 } from '../../redux/slices/toDoListSlice';
-import { Setting } from './Setting';
 
 export const SettingTextSize = () => {
   const dispatch = useAppDispatch();

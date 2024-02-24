@@ -33,15 +33,18 @@ export function App() {
       <AppContent className="pt-2 px-2 lg:pt-36 lg:px-36 w-screen">
         <div className="EXAMPLES_CONTAINER flex flex-col md:flex-row justify-between">
           <section className="p-1" aria-label="Example menu with props">
+            Props
             <SettingsMenu_PROPS />
           </section>
           <section aria-label="Example menu with redux" className="REDUX p-1 ">
+            Redux
             <SettingsMenu_REDUX />
           </section>
           <section
             aria-label="Example menu with children pattern"
             className="CHILDREN p-1"
           >
+            Children
             <SettingsMenu_CHILDREN />
           </section>
         </div>

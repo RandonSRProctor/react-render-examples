@@ -14,7 +14,7 @@ type ToDoListState = {
 
 const initialState: ToDoListState = {
   isLargeFontEnabled: false,
-  backgroundColor: 'bg-white',
+  backgroundColor: 'bg-sky-400',
   userNickname: '',
   isNicknameFormOpen: false,
   listContents: ['This', 'is', 'the', 'initial', 'state'],
