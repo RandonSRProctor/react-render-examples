@@ -17,6 +17,21 @@ export const SettingsMenu_HTML = () => {
             </div>
           </div>
         </li>
+        <li className="BG_COLOR pl-1 py-1 text-sm">
+          <div className="rounded-l pl-1 py-1 pr-14 bg-sky-200 border border-gray-300 border-r-0 shadow">
+            <div className="text-base">
+              <div className="p-1">
+                <span className="font-bold">Background Color</span>:
+                bg-indigo-100
+              </div>
+              <div className="p-1">
+                <button className=" shadow border border-emerald-700 rounded bg-emerald-400 p-1 px-2">
+                  Change Color
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
         <li className="NICKNAME py-1 pl-1 text-sm">
           <div className="rounded-l pl-1 py-1 pr-14 bg-sky-200 border border-gray-300 border-r-0 shadow">
             <div className="text-base">

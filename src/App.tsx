@@ -30,6 +30,9 @@ export function App() {
           <UserIcon className="w-11 h-11" />
         </Gutter>
       </AppHeader>
+
+      {/* FOCUS OF DEMO BELOW */}
+
       <AppContent className="pt-2 px-2 lg:pt-36 lg:px-36 w-screen">
         <div className="EXAMPLES_CONTAINER flex flex-col md:flex-row justify-between">
           <section className="p-1" aria-label="Example menu with props">

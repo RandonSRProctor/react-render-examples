@@ -19,7 +19,8 @@ export const SettingsMenu_CHILDREN = () => {
               <div className="text-base">
                 <div className="p-1">
                   <span className="font-bold">Text Size:</span>
-                  <TextSizeStatus /> Change to Notifications
+                  <TextSizeStatus />
+                  {/* Change to Notifications */}
                 </div>
                 <div className="p-1">
                   <ToggleTextSizeButton />
